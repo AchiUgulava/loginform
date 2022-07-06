@@ -1,0 +1,224 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+.primary {
+  background-color: cornflowerblue;
+}
+.red {
+  background: #c34f4f;
+}
+.green {
+  background: #4fc3a1;
+}
+body {
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  background-color: cornflowerblue;
+}
+.nav {
+  margin: 0;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 50px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.nav-link a {
+  text-decoration: none;
+}
+.nav-link a h1 {
+  color: aliceblue;
+}
+.container {
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+  height: max-content;
+}
+.container .form {
+  margin: 10% -20%;
+  padding: 20%;
+  width: fit-content;
+  border-top: solid 1px #a7a7a7;
+  border-left: solid 1px #a7a7a7;
+  border-right: solid 1px #a7a7a7;
+  border-bottom: solid 1px #a7a7a7;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 100;
+  -moz-box-shadow: 100;
+  box-shadow: 100;
+}
+.container .form .formgroup {
+  text-align: center;
+  padding: 10px;
+}
+.container .form .formgroup input {
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-top: solid 1px #a7a7a7;
+  border-left: solid 1px #a7a7a7;
+  border-right: solid 1px #a7a7a7;
+  border-bottom: solid 1px #a7a7a7;
+}
+.container .form .formgroup button {
+  padding: 10px;
+  font-size: medium;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.container .form .formgroup button:hover {
+  cursor: pointer;
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  filter: alpha(opacity=50);
+}
+.alert {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.alert .alerttext {
+  text-align: center;
+  font-size: large;
+  color: #e6e4e4;
+}
+.alert .alerttext .success {
+  background: #4fc3a1;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.alert .alerttext .fail {
+  background: #c34f4f;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.table-wrapper {
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+.fl-table {
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+.fl-table td,
+.fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 15px;
+}
+.fl-table th {
+  color: #ffffff;
+  background: #4fc3a1;
+}
+.fl-table th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+.fl-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.fl-table button {
+  padding: 5px;
+  background: #c34f4f;
+  color: #f7f7f9;
+  font-weight: 600;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .table-wrapper:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .fl-table {
+    display: block;
+    width: 100%;
+  }
+  .fl-table thead {
+    display: block;
+    float: left;
+  }
+  .fl-table thead th {
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+  .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .fl-table td,
+  .fl-table th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .fl-table tbody {
+    display: block;
+  }
+  .fl-table tbody tr {
+    display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .fl-table tbody tr:nth-child(even) {
+    background: transparent;
+  }
+  .fl-table tbody td {
+    display: block;
+    text-align: center;
+  }
+  .fl-table tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
+  }
+  .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #e6e4e4;
+  }
+}
